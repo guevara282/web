@@ -1,0 +1,30 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each repor}}
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <a href="" target="_blank">
+                        <h3 class="card-title text-uppercase">
+                            {{fecha}}
+                        </h3>
+                    </a>
+                    <p class="m-2">usuario: {{iduser}}</p>
+                    <p class="m-2">nombre: {{nombre}} {{apellido}}</p>
+                    <p class="m-2">direccion:{{direccion}}</p>
+                    <p class="m-2">barrio:{{barrio}}</p>
+                    <p class="m-2">id del servicio: {{idservicio}}</p>
+                    <p class="m-2">descripcion: {{descripcion}}</p>
+                    <p class="m-2">tecnico: {{idtecnico}}</p>
+                    <p class="m-2">nombre: {{nombretec}}{{apetec}}</p>
+
+                    <p class="m-2">id aparato: {{id_aparato}}</p>
+                    <p class="m-2">nombre aparato: {{nombre_aparato}}</p>
+                    <p class="m-2">Calificacion: {{calificacion}}</p>
+                    <p class="m-2">Precio: {{precio}}</p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

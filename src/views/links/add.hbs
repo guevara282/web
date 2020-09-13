@@ -1,0 +1,36 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+
+            <div class="card">
+                <div class="card-body">
+                    <form action="/links/add" method="POST">
+                        <div class="form-group">
+                            <input type="date" name="fecha" class="form-control" autofocus required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="direccion" class="form-control" placeholder="Direccion" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="barrio" class="form-control" placeholder="Barrio" required>
+                        </div>
+                        <div class="form-group">
+                            <select name="id_aparato">
+                                {{#each apara}}
+                                <option value={{id_aparato}}>{{nombre_aparato}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                       
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Confirmar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

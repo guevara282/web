@@ -1,0 +1,26 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/links/editecaparato/{{links.id_aparato}}" method="POST">
+                        <div class="form-group">
+                            <input type="text" value="{{links.nombre_aparato}}" name="nombre_aparato" class="form-control" placeholder= "Apartato "readonly="readonly">
+                        </div>
+                       
+                        <div class="form-group">
+                            <input type="text" value="{{links.precio}}" name="precio" class="form-control" placeholder="Precio" autofocus>
+                        </div>
+                       
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                guardar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

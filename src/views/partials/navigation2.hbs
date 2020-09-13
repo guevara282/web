@@ -1,0 +1,82 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <i class="fas fa-link"></i> Servitec
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+
+        {{#if user}}
+        
+        {{#ifCond user.rol '==' 1}}
+
+        <li class="nav-item">
+          <a class="nav-link" href="/profile">Rol user</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/links/add">Pide un servicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/links">Servicios en espera</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/links/historial">Historial de servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/links/servicioscalificar">Servicios sin calificar</a>
+        </li>
+
+        {{/ifCond}}
+        {{#ifCond user.rol '==' 2}}
+        <li class="nav-item">
+          <a class="nav-link" href="/profile">Rol tecnic</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/links/confirm">Solicitudes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/links/historial">Historial de servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/links/misaparatos">Mis aparatos</a>
+        </li>
+
+        {{/ifCond}}
+        {{#ifCond user.rol '==' 3}}
+        <li class="nav-item">
+          <a class="nav-link" href="/profile">Rol admin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/links/rol">Administrar roles</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/links/linksall">Historial de servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/links/aparato">Administrar aparatos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/links/reportes">Reportes</a>
+        </li>
+
+        {{/ifCond}}
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Cerrar sesion</a>
+        </li>
+        {{else}}
+
+        <li class="nav-item">
+          <a class="nav-link" href="/signin">Iniciar sesion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/signup">Registrarse</a>
+        </li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>

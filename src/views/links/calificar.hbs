@@ -1,0 +1,58 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/links/calificar/{{links.idservicio}}" method="POST">
+                         <label>Fecha:</label>
+                        <div class="form-group">
+                            <input type="text" value="{{links.fecha}}" name="fecha" class="form-control "
+                                readonly="readonly">
+                        </div>
+
+                         <label>Direccion:</label>
+                        <div class="form-group">
+                            <input type="text" value="{{links.direccion}}" name="direccion" class="form-control "
+                                readonly="readonly">
+                        </div>
+                         <label>Barrio:</label>
+                        <div class="form-group">
+                            <input type="text" value="{{links.barrio}}" name="barrio" class="form-control "
+                                readonly="readonly">
+                        </div>
+                        <label>Tecnico :</label>
+                        <div class="form-group">
+                            <input type="text" value="{{links.nombretec}} {{links.apetec}}" name="nombre"
+                                class="form-control " readonly="readonly">
+                        </div>
+
+                        <div class="form-group">
+                            <label>identificacion : <input type="text" value="{{links.idtecnico}}" name="idtecnico"
+                                    class="form-control " readonly="readonly"></label>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Nombre Aparato: <input type="text" value="{{links.nombre_aparato}}" name="nombreaparato"
+                                    class="form-control " readonly="readonly"></label>
+                        </div>
+                        <div class="form-group">
+                            <label>id Aparato: <input type="text" value="{{links.id_aparato}}" name="id_aparato"
+                                    class="form-control " readonly="readonly"></label>
+                        </div>
+                        <div class="form-group">
+                            <label>Calificacion: 1:minimo 5:maximo <input type="number"  name="calificacion"
+                                    class="form-control " autofocus max="5" min="1"></label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                guardar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

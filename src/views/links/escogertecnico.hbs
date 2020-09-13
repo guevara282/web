@@ -1,0 +1,43 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/links/add2" method="POST">
+                        <div class="form-group">
+                            <input type="date" name="fecha" value="{{newlink.fecha}}" class="form-control"
+                                readonly="readonly">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" readonly="readonly" name="direccion" value="{{newlink.direccion}}"
+                                class="form-control" placeholder="Direccion">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="barrio" readonly="readonly" class="form-control"
+                                placeholder="Barrio" value="{{newlink.barrio}}">
+                        </div>
+                        <div class="form-group">
+                            <select name="id_aparato" readonly="readonly">
+                                <option value={{newlink.id_aparato}}>{{apara.nombre_aparato}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select name="idtecnico">
+                                {{#each tecno}}
+                                <option value={{identificacion}}>{{nombre}}{{apellido}} Precio:{{precio}} </option>
+                                {{/each}}
+                            </select>
+                        </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success btn-block">
+                        Confirmar
+                    </button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>

@@ -1,0 +1,59 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center">
+                <div class="card-body">
+                    <form action="/links/servicio/{{links.idservicioespera}}" method="POST">
+                        <label>Fecha:</label>
+                        <div class="form-group">
+                            <input type="text" value="{{links.fecha}}" name="fecha" class="form-control "
+                                readonly="readonly">
+                        </div>
+
+                         <label>Direccion:</label>
+                        <div class="form-group">
+                            <input type="text" value="{{links.direccion}}" name="direccion" class="form-control "
+                                readonly="readonly">
+                        </div>
+                         <label>Barrio:</label>
+                        <div class="form-group">
+                            <input type="text" value="{{links.barrio}}" name="barrio" class="form-control "
+                                readonly="readonly">
+                        </div>
+                        <label>Usuario :</label>
+                        <div class="form-group">
+                            <input type="text" value="{{links.nombre}} {{links.apellido}}" name="nombre"
+                                class="form-control " readonly="readonly">
+                        </div>
+
+                        <div class="form-group">
+                            <label>identificacion : <input type="text" value="{{links.identificacion}}" name="iduser"
+                                    class="form-control " readonly="readonly"></label>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Nombre Aparato: <input type="text" value="{{links.nombre_aparato}}" name="nombreaparato"
+                                    class="form-control " readonly="readonly"></label>
+                        </div>
+                        <div class="form-group">
+                            <label>id Aparato: <input type="text" value="{{links.id_aparato}}" name="id_aparato"
+                                    class="form-control " readonly="readonly"></label>
+                        </div>
+                        <div class="form-group">
+                            <label>Precio: <input type="number"  name="precio"
+                                    class="form-control " min="{{links.precio}}" ></label>
+                        </div>
+                        
+                        <label>Descripcion del servicio:</label>
+                        <textarea name="descripcion" rows="5" cols="45" autofocus required></textarea>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Registrar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
