@@ -255,7 +255,7 @@ router.get('/servicioscalificar', isLoggedIn, async (req, res) => {
 });
 router.get('/calificar/:idservicio', isLoggedIn, async (req, res) => {
     const { idservicio } = req.params;
-    const links = await pool.query('SELECT s.idtecnico AS idtecnico, t.nombre AS nombretec,  t.apellido AS apetec, s.idservicio, s.fecha, s.direccion, s.descripcion, s.barrio, a.nombre_aparato, s.id_aparato, s.calificacion  FROM tecnicos t, usuario u, aparato a, servicios s WHERE s.id_aparato=a.id_aparato AND t.identificacion=s.idtecnico AND s.idservicio=?', [idservicio]);
+    const links = await pool.query('SELECT s.idtecnico AS idtecnico, t.nombre AS nombretec,  t.apellido AS apetec, s.idservicio, s.fecha, s.direccion, s.descripcion, s.barrio, a.nombre_aparato, s.id_aparato, s.calificacion  FROM tecnicos t, aparato a, servicios s WHERE s.id_aparato=a.id_aparato AND t.identificacion=s.idtecnico AND s.idservicio=?', [idservicio]);
     res.render('links/calificar', { links: links[0] });
 });
 router.post('/calificar/:idservicio', isLoggedIn, async (req, res) => {
