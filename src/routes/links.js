@@ -209,7 +209,7 @@ router.post('/editrol/:idrol', isLoggedIn, async (req, res) => {
 
 router.get('/linksall', isLoggedIn, async (req, res) => {
     console.log('ser');
-    const links = await pool.query('SELECT s.precio, s.calificacion, s.iduser, u.nombre, u.apellido, s.idtecnico AS idtecnico, t.nombre AS nombretec,  t.apellido AS apetec, s.idservicio, s.fecha, s.direccion, s.descripcion, s.barrio, a.nombre_aparato, s.id_aparato  FROM tecnicos t, usuario u, aparato a, servicios s WHERE s.id_aparato=a.id_aparato AND t.identificacion=s.idtecnico;  ');
+    const links = await pool.query('SELECT s.precio, s.calificacion, s.iduser, u.nombre, u.apellido, s.idtecnico AS idtecnico, t.nombre AS nombretec,  t.apellido AS apetec, s.idservicio, s.fecha, s.direccion, s.descripcion, s.barrio, a.nombre_aparato, s.id_aparato  FROM tecnicos t, usuario u, aparato a, servicios s WHERE s.id_aparato=a.id_aparato AND t.identificacion=s.idtecnico AND s.iduser=u.identificacion;  ');
     res.render('links/linksall', { links });
 });
 
